@@ -25,7 +25,7 @@ public class ServicioREST {
 		
 		get("/", (req, res) -> "Guenassss");
 		
-		get("/listar", (req, res) -> {
+		get("/alumno", (req, res) -> {
 			res.status(200);
 			
 			List alumnos = alumnoService.findAll();
@@ -37,7 +37,7 @@ public class ServicioREST {
 			}
 		});
 		
-		get("/listar/:id", (req, res) -> {
+		get("/alumno/:id", (req, res) -> {
 			
 			String id = req.params(":id");
 			Alumno a = alumnoService.findById(id);
